@@ -1,0 +1,296 @@
+body{
+    background-color: rgb(28, 26, 26);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.inline_text_all{
+    display: inline;
+}
+
+/* div{
+    border: 1px solid white;
+} */
+#navbar_container{
+    border-bottom: 1px solid rgb(168, 163, 163);
+    position: sticky;
+    top:0;
+    overflow: hidden;
+}
+#navbar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content:space-between;
+    background-color:  rgb(28, 26, 26);
+    font-size: 22px;
+    
+}
+
+#nav_leftpart a:hover{
+    
+    text-decoration: underline;
+    text-decoration-color: teal;
+    text-underline-offset: 5%;
+    
+}
+#nav_leftpart{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+#Home_button p{
+    font-size: 26px;
+}
+
+#details{
+    margin: auto;
+    margin-top: 7%;
+    width: 85%;
+}
+#hey_there_p{
+    color: #3CCF91;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: -10%;
+    margin-left: 0.4%;
+    
+}
+#name_p{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 90px;
+    margin-bottom: 4%;
+}
+
+p{
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+#text_below_name p{
+    font-size: 20px;
+}
+.grey_text_rest{
+    color: #adb3bc;
+}
+#resume_download{
+    margin-top: 4%;
+    display: flex;
+    gap: 50px;
+}
+#resume_download button:hover{
+    cursor: pointer;
+    background-color: #85c3a9;
+}
+#aboutme{
+    display: flex;
+    margin: auto;
+    margin-top: 12%;
+    width: 85%;
+    justify-content: space-between;
+}
+
+#hey_there_img{
+    width: 35px;
+    height: 35px;
+
+}
+#myphoto{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-top: 4px solid rgb(100, 95, 95);
+    border-left:4px solid rgb(100, 95, 95);
+    border-right: 4px solid rgb(100, 95, 95);
+    border-bottom: 4px solid rgb(223, 214, 214);
+}
+
+.grey_text_home{
+    display:inline;
+     color: #8F9094
+}
+
+
+#skills{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+}
+.skill_image{
+    width: 50px;
+    height: 50px;
+}
+#projects{
+    display: grid;
+    width: 85%;
+    grid-template-rows: 500px ;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin: auto;
+    text-align: center;
+    line-height: 0.47cm;
+}
+#projects>div{
+    border: 0.5px solid rgb(202, 207, 202);
+    border-radius: 3%;
+    
+}
+#projects>div:hover{
+box-shadow: rgba(240, 46, 170, 0.4) 0px 4px, rgba(240, 46, 170, 0.3) 0px 6px, rgba(240, 46, 170, 0.2) 0px 8px, rgba(240, 46, 170, 0.1) 0px 10px, rgba(240, 46, 170, 0.05) 0px 12px;
+transition-delay: 0.1s;
+}
+#projects img{
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    width: 100%;
+    height: 60%;
+    
+}
+.project_buttons_div{
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+
+}
+#projects button:hover{
+    background-color:rgb(129, 67, 67);
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+#lastmessage{
+    width: 35%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+#contact{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    justify-content: space-around;
+}
+#contact button,#resume_download button,#projects button{
+    background-color:rgb(55, 18, 18);
+    font-size: 16px; 
+    color: #FFFFFF;
+    padding: 8px 10px 8px 10px;
+    border: none;
+    border-radius: 5px;
+}
+#contact button:hover{
+    background-color:rgb(106, 73, 73);
+    transition-delay: 0.15s;
+    cursor: pointer;
+}
+
+#contact img,#resume_download img,#text_below_name img,.aboutme_description_img{
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+
+#footer_message img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+#projectHead,#skills_tools{
+    margin-top: 10%;
+    text-align: center;
+    margin-bottom: 3%;
+    text-decoration: underline;
+}
+#footer_message{
+    text-align: center;
+}
+
+@media all and (max-width:1024px) and (min-width:761px) {
+    
+    #nav_leftpart{
+        width:60%
+       } 
+   #myphoto{
+    width: 200px;
+    height: 200px;
+   }
+   #name_p{
+    font-size: 70px;
+    margin-bottom: 4%;
+}
+
+#projects{
+    width: 90%;
+    grid-template-rows: 480px ;
+    line-height: 110%;
+}
+#contact{
+    width: 60%;
+}
+}
+
+@media all and (max-width:760px) and (min-width:100px) {
+    p{
+        font-size: 16px;
+    }
+   #navbar{
+    width: 100%;
+   }
+   #nav_leftpart{
+    width:84%;
+    }
+   #Home_button p{
+    font-size: 22px;
+   }
+   #hey_there_p{
+    margin-bottom: -6%;
+    margin-left: 0%;
+    
+}
+   #name_p{
+    font-size: 40px;
+    margin-bottom: 4%;
+}
+#aboutme{
+    flex-direction: column-reverse;
+    margin-top: 12%;
+    width: 85%;
+    
+}
+#aboutme h1{
+    text-align: center
+}
+#myphoto{
+    width:  150px;
+    height: 150px;
+    margin-left: 25%;
+}
+   #skills{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+#projects{
+    grid-template-rows: 350px 350px ;
+    grid-template-columns: repeat(1,1fr);
+    gap: 40px;
+    text-align: start;
+    line-height: 95%;
+}
+#projects img{
+    width: 100%;
+    height: 50%;
+    
+}
+#contact{
+    width: 90%;
+}
+}
