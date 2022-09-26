@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemant Sharma's Portfolio</title>
 </head>
+<link
+   rel="stylesheet"
+   href="/styles/calendar.css"
+/>
 <link rel="stylesheet" href="/styles/style.css">
 <body>
 
+    <div id="navsmartphone">
+        <img id="smartphonemenuimage" src="/logos/menu-rounded.png">
+    </div>
     <!-- NAVBAR -->
 <div id="navbar_container">
     <div id="navbar">
@@ -51,7 +58,7 @@
         </div>
 
         <div id="resume_download">
-            <a href="https://drive.google.com/file/d/1G8bhwr2kxKV-r18CnrAE3lFS2XqVZBis/view?usp=sharing" target="_blank">
+            <a href="https://drive.google.com/uc?id=1G8bhwr2kxKV-r18CnrAE3lFS2XqVZBis&export=download" target="_blank">
                 <button>
                     <img src="/logos/resume_icon.png" alt="">
                     <p class="inline_text_all">Resume</p>
@@ -121,6 +128,14 @@
             <p>Git</p>
         </div>
     </div>
+
+<!-- GITHUB CALENDAR -->
+    
+<h1 id="gitcal">My GitHub</h1>
+<div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
 
     <!-- PROJECTS -->
 
@@ -229,4 +244,11 @@
     </div>
 </body>
 </html>
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
+></script>
+<script>
+    // or enable responsive functionality
+    GitHubCalendar(".calendar", "hemant097", { responsive: true });
+</script>
 <script src="pscript.js"></script>
