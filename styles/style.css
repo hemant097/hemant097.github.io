@@ -15,25 +15,26 @@ body{
     position: sticky;
     top:0;
     overflow: hidden;
+    background-color:  rgb(28, 26, 26);
 }
 #navbar{
     display: flex;
     width: 90%;
     margin: auto;
     justify-content:space-between;
-    background-color:  rgb(28, 26, 26);
+    /* background-color:  rgb(28, 26, 26); */
     font-size: 22px;
     
 }
 
-#nav_leftpart a:hover{
+#nav_rightpart a:hover{
     
     text-decoration: underline;
     text-decoration-color: teal;
     text-underline-offset: 5%;
     
 }
-#nav_leftpart{
+#nav_rightpart{
     display: flex;
     width: 50%;
     justify-content: space-between;
@@ -142,7 +143,7 @@ a{
 #projects{
     display: grid;
     width: 85%;
-    grid-template-rows: 500px ;
+    grid-template-rows: 500px 500px ;
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
     margin: auto;
@@ -226,9 +227,11 @@ transition-delay: 0.1s;
     text-align: center;
 }
 
+/* below css is for tablets */
+
 @media all and (max-width:1024px) and (min-width:761px) {
     
-    #nav_leftpart{
+    #nav_rightpart{
         width:60%
        } 
    #myphoto{
@@ -241,14 +244,21 @@ transition-delay: 0.1s;
 }
 
 #projects{
-    width: 90%;
-    grid-template-rows: 480px ;
+    width: 92%;
+    grid-template-rows: 470px 470px ;
+    gap: 30px;
     line-height: 110%;
+}
+#projects img{
+    height: 50%;
+    
 }
 #contact{
     width: 60%;
 }
 }
+
+/* below css is for mobiles */
 
 @media all and (max-width:760px) and (min-width:100px) {
     p{
@@ -256,14 +266,14 @@ transition-delay: 0.1s;
     }
     #navbar_container{
         display: none;
-        top:5%;
+        top:4.4%;
     }
    #navbar{   
     flex-direction: column;
     width: 100%;
     text-align: center;
    }
-   #nav_leftpart{
+   #nav_rightpart{
     width:100%;
     flex-direction: column;
     }
@@ -302,11 +312,12 @@ transition-delay: 0.1s;
     gap: 20px;
 }
 #projects{
-    grid-template-rows: 350px 350px ;
+    width: 90%;
+    grid-template-rows: repeat(3,380px) ;
     grid-template-columns: repeat(1,1fr);
-    gap: 40px;
+    gap: 25px;
     text-align: start;
-    line-height: 95%;
+    line-height: 98%;
 }
 #projects img{
     width: 100%;
