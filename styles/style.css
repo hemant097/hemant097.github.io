@@ -16,6 +16,8 @@ body{
     top:0;
     overflow: hidden;
     background-color:  rgb(28, 26, 26);
+    transition: max-height 0.3s ease;
+    overflow: hidden;
 }
 #navbar{
     display: flex;
@@ -267,6 +269,11 @@ transition-delay: 0.1s;
     #navbar_container{
         display: none;
         top:4.4%;
+        max-height: 0;
+    }
+    #navbar_container.show {
+        display: block;
+        max-height: 500px; /* adjust as needed */
     }
    #navbar{   
     flex-direction: column;
