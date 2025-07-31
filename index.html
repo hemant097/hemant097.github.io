@@ -5,12 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemant Sharma's Portfolio</title>
+<style>
+@media (max-width: 760px) {
+  #navbar_container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    z-index: 1000;
+    flex-direction: column;
+  }
+  #navbar_container.show {
+    display: flex !important;
+    flex-direction: column;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #nav_rightpart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #nav_rightpart a {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  #nav_rightpart a div {
+    color: #fff;
+  }
+}
+
+</style>
+  <link rel="stylesheet" href="/styles/calendar.css" />
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
-<link
-   rel="stylesheet"
-   href="/styles/calendar.css"
-/>
-<link rel="stylesheet" href="./styles/style.css">
 <body>
 
     <div id="navsmartphone">
@@ -46,7 +83,7 @@
             </p>
             <p id="name_p">
                 Hemant Sharma
-            <p/>
+            </p>
         </div>
         <div id="text_below_name">
            <p class="inline_text_all">Java Backend Developer.</p>
@@ -289,35 +326,29 @@
 
 <script>
 
-    document.getElementById('smartphonemenuimage').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar_container');
-    // Toggle display between 'block' and 'none'
-    if (navbar.style.display === 'block') {
-        navbar.style.display = 'none';
-    } else {
-        navbar.style.display = 'block';
-    }
-});
 
-// Optional: Hide menu when a link is clicked (for better UX)
-document.querySelectorAll('#nav_rightpart a').forEach(function(link) {
-    link.addEventListener('click', function() {
-        if (window.innerWidth <= 760) {
-            document.getElementById('navbar_container').style.display = 'none';
+    document.getElementById('smartphonemenuimage').addEventListener('click', function() {
+        var navbar = document.getElementById('navbar_container');
+        navbar.classList.toggle('show');
+    });
+
+    // Hide menu when a link is clicked (for better UX)
+    document.querySelectorAll('#nav_rightpart a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 760) {
+                document.getElementById('navbar_container').classList.remove('show');
+            }
+        });
+    });
+
+    // Reset menu display when resizing window (for desktop/mobile transitions)
+    window.addEventListener('resize', function() {
+        var navbar = document.getElementById('navbar_container');
+        if (window.innerWidth > 760) {
+            navbar.classList.remove('show');
         }
     });
-});
-
 
     GitHubCalendar(".calendar", "hemant097");
-
-    // or enable responsive functionality:
     GitHubCalendar(".calendar", "hemant097", { responsive: true });
-
-    // Use a proxy
-    // GitHubCalendar(".calendar", "hemant097", {
-    //    proxy (username) {
-    //      return fetch(`https://your-proxy.com/github?user=${username}`)
-    //    }
-    // }).then(r => r.text())
 </script>
